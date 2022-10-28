@@ -9,6 +9,50 @@
 </head>
 <body>
     
+    <div class="popUpContainer">
+        <div class="addBookContainer">
+            <button class="closePopUp">Close</button>
+            <form action="#">
+                <div class="formInput">
+                    <div><label for="bookName">Book Name</label></div>
+                    <input type="text" id="bookName" class="textinput" required>
+                </div>
+                <div class="formInput">
+                    <div><label for="authorName">Author</label></div>
+                    <input type="text" id="authorName"  class="textinput"required>
+        
+                </div>
+                <div class="formInput">
+                    <div><label for="pages">Total Pages</label></div>
+                    <input type="number" id="pages" class="textinput" required>
+                </div>
+                <div class="formInput">
+                    <div><label for="read">Read</label></div>
+                    <input type= "checkbox" id="read" class="checkinput">
+                </div>
+                <button type="submit" class="submitBook">Add Book</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="layoutContainer">
+        <div class="topHeader">
+            <div class="logo"> BIG TEXT</div>
+        </div>
+        <div class="bookShelf">
+            <div class="book">
+                <div class="bookMetaData">
+                    <div class="bookTitle">Insert Title Here</div>
+                    <div class="authorText">Place Holder</div>
+                </div>
+                <div class="descriptionText">Place holder</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="addBook"> <img src="./images/mainicon.svg" alt="Add"> </button>
+ 
+
     <script src="scripts.js"></script>
 </body>
 </html>

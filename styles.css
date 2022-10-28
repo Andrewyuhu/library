@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --main-color: #8b5cf6;
+    --accent: #6d28d9;
+    --main-font: "Poppins"
+}
+
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:var(--main-font);
+}
+
+.layoutContainer {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.topHeader {
+    display:flex;
+    width:100vw;
+    background-color: var(--main-color);
+    padding:25px;
+}
+
+.logo {
+    font-size:60px;
+    color:white;
+    font-weight: bolder;
+}
+
+.bookShelf {
+    margin-top:10px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    align-items: center;
+    justify-items: stretch;
+    gap:10px;
+    padding:10px;
+
+    
+}
+
+.book {
+    color:white;
+    border-radius:25px;
+    height:300px;
+    background-color: #5b21b6;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.popUpContainer {
+    display:flex;
+    position:absolute;
+    top:-100%;
+    z-index:2;
+    width:100vw;
+    height:max(100%,100vh);
+    justify-content: center;
+    align-items: center;
+    
+
+    transition: transform .75s ;
+}
+
+.appearAnimation {
+    transform: translateY(100%);
+}
+.addBookContainer {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    padding: 25px;
+    margin: 30vh auto;
+   
+    width:min(50%,450px);
+    background-color: var(--main-color);
+    border-radius: 25px;
+    color:white;
+}
+
+.bookMetaData {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.invalid {
+    border:2px solid red;
+}
+
+.textinput {
+    border-radius: 5px;
+    border-style:none;
+    padding:2.5px 5px;
+    width:250px;
+}
+
+.textinput:focus{
+    outline: none !important;
+    border: 2.5px var(--accent) solid; 
+}
+
+.checkinput {
+    accent-color:var(--accent);
+}
+
+button {
+    background-color: var(--accent);
+    border-radius: 5px;
+    border-style:none;
+    padding:5px;
+    color:white;
+    transition: all 0.5s;
+}
+
+button:hover {
+    scale:1.1;
+}
+
+
+
+
+.addBook {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:75px;
+    width:75px;
+    border-radius:50%;
+    position:fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.closePopUp {
+    margin-left:auto;
+}
